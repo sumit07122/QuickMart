@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickMart – Online Grocery Store | 10-Minute Delivery</title>
+  <meta name="description" content="QuickMart delivers fresh groceries, dairy, snacks, chilled drinks, and personal care essentials to your doorstep in 10 minutes.">
+  <meta name="theme-color" content="#0c831f">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="QuickMart – Online Grocery Store">
+  <meta property="og:description" content="Fresh groceries delivered in 10 minutes at everyday low prices.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- Google Fonts for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="home">
+
+  <!-- ==================== HEADER SECTION ==================== -->
+  <header class="header">
+    <div class="header-container">
+      
+      <!-- Logo -->
+      <a href="#home" class="logo">
+        <span class="logo-icon">⚡</span>
+        <div class="logo-text">
+          <span class="brand-name">QuickMart</span>
+          <span class="brand-tagline">10 MIN DELIVERY</span>
+        </div>
+      </a>
+
+      <!-- Delivery Location -->
+      <div class="location-box">
+        <span class="location-icon">📍</span>
+        <div class="location-info">
+          <span class="delivery-time">Delivery in 10 mins</span>
+          <span class="current-address">GLA Campus, Hostel 4</span>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <form action="#products" class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input 
+          type="text" 
+          placeholder="Search for milk, chips, shampoo..." 
+          required
+        >
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+
+      <!-- Cart Button linking to Cart Section -->
+      <a href="#cart-section" class="cart-btn">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-btn-text">My Cart</span>
+        <span class="cart-badge">2</span>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ==================== CATEGORIES NAVIGATION ==================== -->
+  <nav class="category-nav">
+    <div class="category-container">
+      <a href="#home" class="cat-pill active">🏠 Home</a>
+      <a href="#groceries" class="cat-pill">🥛 Groceries</a>
+      <a href="#snacks" class="cat-pill">🍟 Snacks</a>
+      <a href="#drinks" class="cat-pill">🥤 Drinks</a>
+      <a href="#personal-care" class="cat-pill">🧴 Personal Care</a>
+    </div>
+  </nav>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="main-container">
+
+    <!-- Promo Banner Strip -->
+    <div class="announcement-bar">
+      <span>🎉 <strong>College Offer:</strong> Free express delivery on all orders today!</span>
+    </div>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <span class="hero-badge">⚡ Fastest Delivery</span>
+        <h1 class="hero-title">Fresh Groceries Delivered to Your Door</h1>
+        <p class="hero-subtitle">
+          Get fresh dairy, snacks, drinks, and daily essentials delivered right to your room in 10 minutes at everyday low prices.
+        </p>
+        <div class="hero-actions">
+          <a href="#products" class="hero-btn">Shop Essentials</a>
+          <a href="#cart-section" class="hero-outline-btn">View Cart (2)</a>
+        </div>
+      </div>
+
+      <div class="hero-features">
+        <div class="feature-card">⏱️ 10 Min Delivery</div>
+        <div class="feature-card">🌿 100% Fresh Produce</div>
+        <div class="feature-card">💰 Pocket Friendly</div>
+      </div>
+    </section>
+
+    <!-- Content Layout: Products & Cart Section -->
+    <div class="content-layout">
+
+      <!-- ==================== PRODUCTS LISTING ==================== -->
+      <div class="products-area" id="products">
+
+        <!-- Category: Groceries -->
+        <section class="category-group" id="groceries">
+          <div class="group-header">
+            <h2 class="group-title">🥛 Groceries & Dairy</h2>
+            <span class="group-badge">4 Items</span>
+          </div>
+
+          <div class="product-grid">
+            
+            <!-- 1. Milk -->
+            <div class="product-card">
+              <span class="badge-time">⚡ 10 MINS</span>
+              <div class="product-img-box">
+                <img 
+                  src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=400&q=80" 
+                  alt="Fresh Milk"
+                  class="product-img"
+                >
+              </div>
+              <h3 class="product-title">Milk</h3>
+              <p class="product-unit">500 ml pouch</p>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price">₹30</span>
+                  <span class="old-price">₹35</span>
+                </div>
+                <a href="#cart-section" class="add-btn">+ ADD</a>
+              </div>
+            </div>
+
+            <!-- 2. Bread -->
+            <div class="product-card">
+              <span class="badge-time">⚡ 10 MINS</span>
+              <div class="product-img-box">
+                <img 
+                  src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80" 
+                  alt="Bread"
+                  class="product-img"
+                >
+              </div>
+              <h3 class="product-title">Bread</h3>
+              <p class="product-unit">400 g loaf</p>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price">₹40</span>
+                  <span class="old-price">₹45</span>
+                </div>
+                <a href="#cart-section" class="add-btn">+ ADD</a>
+              </div>
+            </div>
+
+            <!-- 3. Eggs -->
+            <div class="product-card">
+              <span class="badge-time">⚡ 10 MINS</span>
+              <div class="product-img-box">
+                <img 
+                  src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?auto=format&fit=crop&w=400&q=80" 
+                  alt="Fresh Eggs"
+                  class="product-img"
+                >
+              </div>
+              <h3 class="product-title">Eggs</h3>
+              <p class="product-unit">6 pcs pack</p>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price">₹70</span>
+                  <span class="old-price">₹80</span>
+                </div>
+                <a href="#cart-section" class="add-btn">+ ADD</a>
+              </div>
+            </div>
+
+            <!-- 4. Bananas -->
+            <div class="product-card">
+              <span class="badge-time">⚡ 10 MINS</span>
+              <div class="product-img-box">
+                <img 
+                  src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=400&q=80" 
+                  alt="Bananas"
+                  class="product-img"
+                >
+              </div>
+              <h3 class="product-title">Bananas</h3>
+              <p class="product-unit">1 kg (approx 6-7 pcs)</p>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price">₹50</span>
+                  <span class="old-price">₹60</span>
+                </div>
+                <a href="#cart-section" class="add-btn">+ ADD</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Category: Snacks -->
+        <section class="category-group" id="snacks">
+          <div class="group-header">
+            <h2 class="group-title">🍟 Crispy Snacks</h2>
+            <span class="group-badge">2 Items</span>
+          </div>
+
+          <div class="product-grid">
+
+            <!-- 5. Potato Chips -->
+            <div class="product-card">
+              <span class="badge-time">⚡ 10 MINS</span>
+              <div class="product-img-box">
+                <img 
+                  src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=400&q=80" 
+                  alt="Potato Chips"
+                  class="product-img"
+                >
+              </div>
+              <h3 class="product-title">Potato Chips</h3>
+              <p class="product-unit">52 g crunchy packet</p>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price">₹20</span>
+                  <span class="old-price">₹20</span>
+                </div>
+                <a href="#cart-section" class="add-btn">+ ADD</a>
+              </div>
+            </div>
+
+            <!-- 7. Biscuits -->
+            <div class="product-card">
+              <span class="badge-time">⚡ 10 MINS</span>
+              <div class="product-img-box">
+                <img 
+                  src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=400&q=80" 
+                  alt="Biscuits"
+                  class="product-img"
+                >
+              </div>
+              <h3 class="product-title">Biscuits</h3>
+              <p class="product-unit">200 g pack</p>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price">₹30</span>
+                  <span class="old-price">₹35</span>
+                </div>
+                <a href="#cart-section" class="add-btn">+ ADD</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Category: Drinks & Personal Care -->
+        <section class="category-group" id="drinks">
+          <div class="group-header">
+            <h2 class="group-title">🥤 Chilled Drinks & Hygiene</h2>
+            <span class="group-badge">2 Items</span>
+          </div>
+
+          <div class="product-grid">
+
+            <!-- 6. Cold Drink -->
+            <div class="product-card">
+              <span class="badge-time">⚡ 10 MINS</span>
+              <div class="product-img-box">
+                <img 
+                  src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80" 
+                  alt="Cold Drink"
+                  class="product-img"
+                >
+              </div>
+              <h3 class="product-title">Cold Drink</h3>
+              <p class="product-unit">300 ml can</p>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price">₹40</span>
+                  <span class="old-price">₹45</span>
+                </div>
+                <a href="#cart-section" class="add-btn">+ ADD</a>
+              </div>
+            </div>
+
+            <!-- 8. Shampoo (Personal Care) -->
+            <div class="product-card" id="personal-care">
+              <span class="badge-time">⚡ 10 MINS</span>
+              <div class="product-img-box">
+                <img 
+                  src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=400&q=80" 
+                  alt="Shampoo"
+                  class="product-img"
+                >
+              </div>
+              <h3 class="product-title">Shampoo</h3>
+              <p class="product-unit">180 ml bottle</p>
+              <div class="product-footer">
+                <div class="price-box">
+                  <span class="price">₹99</span>
+                  <span class="old-price">₹120</span>
+                </div>
+                <a href="#cart-section" class="add-btn">+ ADD</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ==================== SHOPPING CART SECTION ==================== -->
+      <aside class="cart-section" id="cart-section">
+        
+        <div class="cart-card">
+          
+          <!-- Cart Header -->
+          <div class="cart-header">
+            <div class="cart-header-title">
+              <span class="cart-icon">🛒</span>
+              <h3>Shopping Cart</h3>
+            </div>
+            <span class="cart-count">2 Items</span>
+          </div>
+
+          <!-- Delivery Address Strip -->
+          <div class="cart-address-box">
+            <span class="pin-icon">📍</span>
+            <div>
+              <div class="addr-label">Delivering in 10 mins</div>
+              <div class="addr-val">GLA Campus, Hostel 4, Mathura</div>
+            </div>
+          </div>
+
+          <!-- Cart Items List -->
+          <div class="cart-items-list">
+            
+            <!-- Item 1: Milk -->
+            <div class="cart-item">
+              <img 
+                src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=100&q=80" 
+                alt="Milk" 
+                class="cart-thumb"
+              >
+              <div class="cart-item-info">
+                <h4 class="cart-item-name">Milk</h4>
+                <p class="cart-item-unit">500 ml pouch</p>
+                <span class="cart-item-price">₹30</span>
+              </div>
+              <div class="cart-qty-box">
+                <span class="qty-btn">-</span>
+                <span class="qty-num">1</span>
+                <span class="qty-btn">+</span>
+              </div>
+            </div>
+
+            <!-- Item 2: Potato Chips -->
+            <div class="cart-item">
+              <img 
+                src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=100&q=80" 
+                alt="Potato Chips" 
+                class="cart-thumb"
+              >
+              <div class="cart-item-info">
+                <h4 class="cart-item-name">Potato Chips</h4>
+                <p class="cart-item-unit">52 g packet</p>
+                <span class="cart-item-price">₹20 × 2 = ₹40</span>
+              </div>
+              <div class="cart-qty-box">
+                <span class="qty-btn">-</span>
+                <span class="qty-num">2</span>
+                <span class="qty-btn">+</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bill Summary -->
+          <div class="bill-summary">
+            <div class="bill-row">
+              <span>Item Total</span>
+              <span>₹70</span>
+            </div>
+            <div class="bill-row">
+              <span>Delivery Fee</span>
+              <span class="free-tag"><del>₹15</del> FREE</span>
+            </div>
+            <hr class="bill-line">
+            <div class="bill-row total-row">
+              <span>Grand Total</span>
+              <span class="total-price">₹70</span>
+            </div>
+          </div>
+
+          <!-- Checkout Button (Links to Pure CSS Success Modal) -->
+          <a href="#order-success" class="checkout-btn">
+            <span>Proceed to Checkout</span>
+            <span>₹70 ➔</span>
+          </a>
+
+          <!-- Empty Cart Notice (for assignment demonstration) -->
+          <div class="empty-state-notice">
+            <span class="info-emoji">💡</span>
+            <span>If the cart is empty, a <em>"Your cart is empty"</em> notice will be displayed here.</span>
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- ==================== PURE CSS ORDER SUCCESS MODAL ==================== -->
+  <!-- This modal activates automatically via CSS :target when clicking Checkout -->
+  <div class="modal-overlay" id="order-success">
+    <div class="modal-card">
+      <div class="modal-icon">🎉</div>
+      <h2 class="modal-title">Order Placed Successfully!</h2>
+      <p class="modal-desc">
+        Thank you for shopping with QuickMart! Your groceries are packed and on their way.
+      </p>
+
+      <div class="order-details-box">
+        <div class="detail-row">
+          <span>Order ID:</span>
+          <strong>#QM-83921</strong>
+        </div>
+        <div class="detail-row">
+          <span>Items Ordered:</span>
+          <span>3 items (Milk, Potato Chips)</span>
+        </div>
+        <div class="detail-row">
+          <span>Total Amount:</span>
+          <strong class="green-text">₹70 (Paid)</strong>
+        </div>
+        <div class="detail-row">
+          <span>Delivery Address:</span>
+          <span>GLA Campus, Hostel 4</span>
+        </div>
+        <div class="detail-row">
+          <span>Delivery Time:</span>
+          <strong class="highlight-text">⚡ Arriving in 10 Minutes</strong>
+        </div>
+      </div>
+
+      <a href="#products" class="modal-close-btn">Continue Shopping</a>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER SECTION ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-col brand-col">
+        <div class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="brand-name">QuickMart</span>
+        </div>
+        <p class="footer-desc">
+          Your friendly online grocery store delivering fresh essentials, snacks, and daily items to college students in 10 minutes.
+        </p>
+        <span class="college-tag">🎓 College Assignment Project (HTML & CSS Only)</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product Categories</h4>
+        <ul class="footer-links">
+          <li><a href="#groceries">Groceries & Dairy</a></li>
+          <li><a href="#snacks">Crispy Snacks</a></li>
+          <li><a href="#drinks">Chilled Drinks</a></li>
+          <li><a href="#personal-care">Personal Care</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sample Products (8)</h4>
+        <ul class="footer-links">
+          <li><span>1. Milk – ₹30</span></li>
+          <li><span>2. Bread – ₹40</span></li>
+          <li><span>3. Eggs – ₹70</span></li>
+          <li><span>4. Bananas – ₹50</span></li>
+          <li><span>5. Potato Chips – ₹20</span></li>
+          <li><span>6. Cold Drink – ₹40</span></li>
+          <li><span>7. Biscuits – ₹30</span></li>
+          <li><span>8. Shampoo – ₹99</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Assignment Details</h4>
+        <ul class="footer-links">
+          <li><span>Technology: Pure HTML5 & CSS3</span></li>
+          <li><span>No JavaScript used</span></li>
+          <li><span>No Frameworks / No Backend</span></li>
+          <li><span>Student: B.Tech CSE</span></li>
+          <li><span>Institution: GLA University</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 QuickMart – Online Grocery Store. Built strictly with Pure HTML & CSS.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
