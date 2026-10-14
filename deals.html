@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deals & Campus Offers – QuickMart | 10 Min Delivery</title>
+  <meta name="description" content="Exclusive student deals, coupon codes, and combo discounts for GLA University campus orders on QuickMart.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="sticky-top navbar-blur shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container py-2">
+      
+      <!-- Brand Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-success fs-4 me-2" href="index.html">
+        <span class="brand-badge">⚡</span>
+        <div><span class="text-success">QuickMart</span></div>
+      </a>
+
+      <!-- Location Chip -->
+      <div class="location-chip d-none d-xl-flex align-items-center me-3">
+        <i class="bi bi-geo-alt-fill text-danger me-2 fs-5"></i>
+        <div class="lh-sm">
+          <div class="d-flex align-items-center gap-1">
+            <span class="live-dot"></span>
+            <small class="fw-bold text-dark">GLA Campus, Hostel 4</small>
+          </div>
+          <small class="text-muted">Mathura • 10 mins delivery</small>
+        </div>
+      </div>
+
+      <!-- Mobile Toggler Button -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Content -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold" href="index.html">
+              <i class="bi bi-house-door-fill me-1"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold" href="categories.html">
+              <i class="bi bi-grid-fill me-1"></i> Categories
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold active" href="deals.html">
+              <i class="bi bi-tag-fill me-1"></i> Deals <span class="badge bg-danger rounded-pill ms-1">HOT</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold" href="about.html">
+              <i class="bi bi-info-circle-fill me-1"></i> About
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a href="cart.html" class="btn btn-success d-flex align-items-center gap-2 px-3 py-2 rounded-pill shadow-sm">
+              <i class="bi bi-cart3 fs-5"></i>
+              <span class="fw-semibold">Cart</span>
+              <span class="badge bg-warning text-dark rounded-pill" id="navCartCount">2</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ==================== BREADCRUMB ==================== -->
+  <div class="bg-light py-3 border-bottom mb-4">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-1 small">
+            <li class="breadcrumb-item"><a href="index.html" class="text-success text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Student Deals</li>
+          </ol>
+        </nav>
+        <h1 class="h3 fw-bold mb-0">🔥 Student Offers & Flash Coupons</h1>
+      </div>
+      <span class="badge bg-warning text-dark p-2 fw-bold">Exclusive for GLA Hostels</span>
+    </div>
+  </div>
+
+  <!-- ==================== DEALS CONTENT ==================== -->
+  <main class="container my-4">
+
+    <!-- Active Promo Code Coupons Section -->
+    <section class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
+        <h2 class="h4 fw-bold mb-0">🎟️ Active Student Discount Codes</h2>
+        <span class="text-muted small">Click code to copy</span>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        
+        <!-- Coupon 1 -->
+        <div class="col">
+          <div class="coupon-card h-100 shadow-sm d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-success">CAMPUS SPECIAL</span>
+                <small class="text-muted">No Minimum Order</small>
+              </div>
+              <h3 class="h5 fw-bold text-success mb-1">100% Free Express Delivery</h3>
+              <p class="text-muted small mb-3">
+                Valid on all grocery orders delivered to any hostel block inside GLA University.
+              </p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+              <span class="coupon-code-badge">GLA100</span>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="copyCoupon('GLA100', this)">
+                <i class="bi bi-clipboard me-1"></i> Copy Code
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 2 -->
+        <div class="col">
+          <div class="coupon-card h-100 shadow-sm d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-warning text-dark">SNACK ATTACK</span>
+                <small class="text-muted">Orders above ₹99</small>
+              </div>
+              <h3 class="h5 fw-bold text-success mb-1">Flat 20% OFF on Munchies</h3>
+              <p class="text-muted small mb-3">
+                Get an instant 20% discount on all potato chips, cookies, noodles, and cold beverages.
+              </p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+              <span class="coupon-code-badge">STUDENT20</span>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="copyCoupon('STUDENT20', this)">
+                <i class="bi bi-clipboard me-1"></i> Copy Code
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 3 -->
+        <div class="col">
+          <div class="coupon-card h-100 shadow-sm d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-dark">NIGHT OWLS</span>
+                <small class="text-muted">10 PM - 3 AM</small>
+              </div>
+              <h3 class="h5 fw-bold text-success mb-1">₹50 OFF Late Night Study Snacks</h3>
+              <p class="text-muted small mb-3">
+                Exam cramming? Get ₹50 off on orders above ₹149 during midnight study hours.
+              </p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+              <span class="coupon-code-badge">MIDNIGHT50</span>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="copyCoupon('MIDNIGHT50', this)">
+                <i class="bi bi-clipboard me-1"></i> Copy Code
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 4 -->
+        <div class="col">
+          <div class="coupon-card h-100 shadow-sm d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-danger">WEEKEND COMBO</span>
+                <small class="text-muted">Saturday & Sunday</small>
+              </div>
+              <h3 class="h5 fw-bold text-success mb-1">Buy 1 Get 1 on Biscuits</h3>
+              <p class="text-muted small mb-3">
+                Order any pack of cookies or biscuits and get an identical pack free this weekend.
+              </p>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+              <span class="coupon-code-badge">HOSTELBOGO</span>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="copyCoupon('HOSTELBOGO', this)">
+                <i class="bi bi-clipboard me-1"></i> Copy Code
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Student Combos & Bundles -->
+    <section class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3 border-bottom pb-2">
+        <h2 class="h4 fw-bold mb-0">📦 Student Value Bundles (Curated Combos)</h2>
+        <span class="badge bg-success">Save up to 25%</span>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        
+        <!-- Combo 1 -->
+        <div class="col">
+          <div class="card h-100 product-card shadow-sm">
+            <span class="discount-pill">SAVE ₹15</span>
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Late Night Combo">
+            </div>
+            <div class="card-body p-3 d-flex flex-column">
+              <span class="badge bg-light text-dark border mb-2 w-auto align-self-start">Study Pack</span>
+              <h3 class="h6 card-title fw-bold mb-1">Late Night Study Combo</h3>
+              <p class="text-muted small mb-2">Chips + Chilled Cola + 2-Min Noodles</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top">
+                <div>
+                  <span class="fw-bold text-success fs-5">₹65</span>
+                  <small class="text-muted text-decoration-line-through ms-1">₹80</small>
+                </div>
+                <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Late Night Combo', 65)">+ ADD</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 2 -->
+        <div class="col">
+          <div class="card h-100 product-card shadow-sm">
+            <span class="discount-pill">SAVE ₹20</span>
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Breakfast Pack">
+            </div>
+            <div class="card-body p-3 d-flex flex-column">
+              <span class="badge bg-light text-dark border mb-2 w-auto align-self-start">Morning Pack</span>
+              <h3 class="h6 card-title fw-bold mb-1">Hostel Breakfast Bundle</h3>
+              <p class="text-muted small mb-2">Fresh Milk + Bread + 6 Farm Eggs</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top">
+                <div>
+                  <span class="fw-bold text-success fs-5">₹125</span>
+                  <small class="text-muted text-decoration-line-through ms-1">₹145</small>
+                </div>
+                <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Breakfast Bundle', 125)">+ ADD</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 3 -->
+        <div class="col">
+          <div class="card h-100 product-card shadow-sm">
+            <span class="discount-pill">SAVE ₹30</span>
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Binge Pack">
+            </div>
+            <div class="card-body p-3 d-flex flex-column">
+              <span class="badge bg-light text-dark border mb-2 w-auto align-self-start">Movie Night</span>
+              <h3 class="h6 card-title fw-bold mb-1">Weekend Binge Pack</h3>
+              <p class="text-muted small mb-2">2x Chips + 2x Cookies + 2x Cola Cans</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top">
+                <div>
+                  <span class="fw-bold text-success fs-5">₹150</span>
+                  <small class="text-muted text-decoration-line-through ms-1">₹180</small>
+                </div>
+                <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Weekend Binge Pack', 150)">+ ADD</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 4 -->
+        <div class="col">
+          <div class="card h-100 product-card shadow-sm">
+            <span class="discount-pill">SAVE ₹45</span>
+            <div class="product-img-box">
+              <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Hygiene Pack">
+            </div>
+            <div class="card-body p-3 d-flex flex-column">
+              <span class="badge bg-light text-dark border mb-2 w-auto align-self-start">Hygiene Kit</span>
+              <h3 class="h6 card-title fw-bold mb-1">Hostel Hygiene Kit</h3>
+              <p class="text-muted small mb-2">Daily Shampoo + Herbal Handwash</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center pt-2 border-top">
+                <div>
+                  <span class="fw-bold text-success fs-5">₹160</span>
+                  <small class="text-muted text-decoration-line-through ms-1">₹205</small>
+                </div>
+                <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Hygiene Kit', 160)">+ ADD</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+    <div id="cartToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="bi bi-check-circle-fill me-2"></i> <span id="toastMsg">Item added to cart!</span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-2 fw-bold text-success fs-4 mb-2">
+            <span class="brand-badge">⚡</span>
+            <span class="text-white">QuickMart</span>
+          </div>
+          <p class="text-white-50 small mb-3">
+            Instant 10-minute grocery delivery store designed for college students to get fresh dairy, snacks, cold drinks, and daily essentials.
+          </p>
+          <span class="badge bg-secondary">🎓 Frontend Assignment (HTML5 + CSS3 + Bootstrap 5)</span>
+        </div>
+
+        <div class="col-md-2 col-6">
+          <h4 class="h6 fw-bold text-uppercase text-light mb-3">Pages</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="categories.html" class="text-white-50 text-decoration-none">All Categories</a></li>
+            <li class="mb-2"><a href="deals.html" class="text-white-50 text-decoration-none">Student Deals</a></li>
+            <li class="mb-2"><a href="cart.html" class="text-white-50 text-decoration-none">Shopping Cart</a></li>
+            <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About QuickMart</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <h4 class="h6 fw-bold text-uppercase text-light mb-3">Categories</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="categories.html" class="text-white-50 text-decoration-none">🥛 Groceries & Dairy</a></li>
+            <li class="mb-2"><a href="categories.html" class="text-white-50 text-decoration-none">🍟 Snacks & Munchies</a></li>
+            <li class="mb-2"><a href="categories.html" class="text-white-50 text-decoration-none">🥤 Cold Drinks</a></li>
+            <li class="mb-2"><a href="categories.html" class="text-white-50 text-decoration-none">🧴 Personal Care</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h4 class="h6 fw-bold text-uppercase text-light mb-3">Student Info</h4>
+          <div class="text-white-50 small">
+            <p class="mb-1"><strong>Course:</strong> Frontend Web Development</p>
+            <p class="mb-1"><strong>Tech Stack:</strong> HTML5, CSS3, Bootstrap 5</p>
+            <p class="mb-1"><strong>Institution:</strong> GLA University</p>
+            <p class="mb-0"><strong>Status:</strong> Vercel Ready ⚡</p>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="my-4 border-secondary">
+
+      <div class="text-center text-white-50 small">
+        © 2026 QuickMart – Online Grocery Store. Built with HTML5, CSS3 & Bootstrap 5.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Interactive Script -->
+  <script>
+    let cartTotalCount = 2;
+    function addToCart(itemName, price) {
+      cartTotalCount++;
+      const navBadge = document.getElementById('navCartCount');
+      if (navBadge) navBadge.innerText = cartTotalCount;
+      
+      const toastEl = document.getElementById('cartToast');
+      document.getElementById('toastMsg').innerText = `Added ${itemName} to cart!`;
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    }
+
+    function copyCoupon(code, btn) {
+      navigator.clipboard.writeText(code).then(() => {
+        btn.innerHTML = '<i class="bi bi-check2"></i> Copied!';
+        btn.classList.remove('btn-outline-success');
+        btn.classList.add('btn-success');
+        setTimeout(() => {
+          btn.innerHTML = '<i class="bi bi-clipboard me-1"></i> Copy Code';
+          btn.classList.remove('btn-success');
+          btn.classList.add('btn-outline-success');
+        }, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>

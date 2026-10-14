@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Categories – QuickMart | 10 Min Delivery</title>
+  <meta name="description" content="Browse all grocery categories on QuickMart - Dairy, Snacks, Drinks, Personal Care and Instant Foods delivered in 10 minutes.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="sticky-top navbar-blur shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container py-2">
+      
+      <!-- Brand Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-success fs-4 me-2" href="index.html">
+        <span class="brand-badge">⚡</span>
+        <div><span class="text-success">QuickMart</span></div>
+      </a>
+
+      <!-- Location Chip -->
+      <div class="location-chip d-none d-xl-flex align-items-center me-3">
+        <i class="bi bi-geo-alt-fill text-danger me-2 fs-5"></i>
+        <div class="lh-sm">
+          <div class="d-flex align-items-center gap-1">
+            <span class="live-dot"></span>
+            <small class="fw-bold text-dark">GLA Campus, Hostel 4</small>
+          </div>
+          <small class="text-muted">Mathura • 10 mins delivery</small>
+        </div>
+      </div>
+
+      <!-- Mobile Toggler Button -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Content -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <form class="d-flex mx-lg-3 my-2 my-lg-0 flex-grow-1" style="max-width: 380px;" onsubmit="event.preventDefault();">
+          <div class="input-group rounded-pill overflow-hidden border w-100 shadow-sm bg-white">
+            <span class="input-group-text bg-white border-0 ps-3">
+              <i class="bi bi-search text-success"></i>
+            </span>
+            <input id="searchInput" class="form-control border-0 bg-white" type="search" placeholder="Search catalog..." aria-label="Search">
+          </div>
+        </form>
+
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold" href="index.html">
+              <i class="bi bi-house-door-fill me-1"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold active" href="categories.html">
+              <i class="bi bi-grid-fill me-1"></i> Categories
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold" href="deals.html">
+              <i class="bi bi-tag-fill me-1"></i> Deals <span class="badge bg-danger rounded-pill ms-1">HOT</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold" href="about.html">
+              <i class="bi bi-info-circle-fill me-1"></i> About
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a href="cart.html" class="btn btn-success d-flex align-items-center gap-2 px-3 py-2 rounded-pill shadow-sm">
+              <i class="bi bi-cart3 fs-5"></i>
+              <span class="fw-semibold">Cart</span>
+              <span class="badge bg-warning text-dark rounded-pill" id="navCartCount">2</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ==================== BREADCRUMB & TITLE ==================== -->
+  <div class="bg-light py-3 border-bottom mb-4">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-1 small">
+            <li class="breadcrumb-item"><a href="index.html" class="text-success text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">All Categories</li>
+          </ol>
+        </nav>
+        <h1 class="h3 fw-bold mb-0">Browse All Categories</h1>
+      </div>
+      <span class="badge bg-success p-2">⚡ 10-Minute Instant Delivery</span>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN CATALOG ==================== -->
+  <main class="container my-4">
+
+    <!-- Category Filter Buttons Strip -->
+    <div class="d-flex gap-2 overflow-auto category-scroll pb-3 mb-4">
+      <button class="cat-btn active" onclick="filterCategory('all', this)">🛒 All Products (12)</button>
+      <button class="cat-btn" onclick="filterCategory('groceries', this)">🥛 Groceries & Dairy (4)</button>
+      <button class="cat-btn" onclick="filterCategory('snacks', this)">🍟 Snacks & Munchies (3)</button>
+      <button class="cat-btn" onclick="filterCategory('drinks', this)">🥤 Cold Drinks (3)</button>
+      <button class="cat-btn" onclick="filterCategory('personal-care', this)">🧴 Personal Care (2)</button>
+    </div>
+
+    <!-- Product Grid (12 Items) -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="catalogGrid">
+      
+      <!-- 1. Milk -->
+      <div class="col product-item" data-category="groceries" data-title="fresh milk amul dairy">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">14% OFF</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Milk">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.9 <span class="text-muted">(420)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">Fresh Milk</h3>
+            <p class="text-muted small mb-2">500 ml pouch</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold text-success fs-5">₹30</span>
+                <small class="text-muted text-decoration-line-through ms-1">₹35</small>
+              </div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Fresh Milk', 30)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Bread -->
+      <div class="col product-item" data-category="groceries" data-title="white bread loaf bakery">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">11% OFF</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Bread">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.8 <span class="text-muted">(310)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">White Bread</h3>
+            <p class="text-muted small mb-2">400 g fresh loaf</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold text-success fs-5">₹40</span>
+                <small class="text-muted text-decoration-line-through ms-1">₹45</small>
+              </div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('White Bread', 40)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Eggs -->
+      <div class="col product-item" data-category="groceries" data-title="farm fresh white eggs dairy">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">12% OFF</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Eggs">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.9 <span class="text-muted">(540)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">Farm Eggs</h3>
+            <p class="text-muted small mb-2">6 pcs white pack</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold text-success fs-5">₹70</span>
+                <small class="text-muted text-decoration-line-through ms-1">₹80</small>
+              </div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Farm Eggs', 70)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Bananas -->
+      <div class="col product-item" data-category="groceries" data-title="fresh bananas fruit">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">16% OFF</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Bananas">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.7 <span class="text-muted">(190)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">Fresh Bananas</h3>
+            <p class="text-muted small mb-2">1 kg (~6-7 pcs)</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold text-success fs-5">₹50</span>
+                <small class="text-muted text-decoration-line-through ms-1">₹60</small>
+              </div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Fresh Bananas', 50)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Potato Chips -->
+      <div class="col product-item" data-category="snacks" data-title="potato chips lays salted crunchy">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">POPULAR</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Chips">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.8 <span class="text-muted">(890)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">Potato Chips</h3>
+            <p class="text-muted small mb-2">52 g classic salted</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div><span class="fw-bold text-success fs-5">₹20</span></div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Potato Chips', 20)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Butter Cookies -->
+      <div class="col product-item" data-category="snacks" data-title="butter cookies biscuits bakery">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">14% OFF</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Cookies">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.9 <span class="text-muted">(670)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">Butter Cookies</h3>
+            <p class="text-muted small mb-2">200 g crunchy pack</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold text-success fs-5">₹30</span>
+                <small class="text-muted text-decoration-line-through ms-1">₹35</small>
+              </div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Butter Cookies', 30)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Instant Noodles -->
+      <div class="col product-item" data-category="snacks" data-title="instant noodles maggi masala ramen">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">BESTSELLER</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Noodles">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.9 <span class="text-muted">(1,240)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">2-Min Masala Noodles</h3>
+            <p class="text-muted small mb-2">70 g hostel classic pack</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div><span class="fw-bold text-success fs-5">₹14</span></div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Masala Noodles', 14)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Chilled Cola -->
+      <div class="col product-item" data-category="drinks" data-title="cold drink cola soda chilled can">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">11% OFF</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Cola">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.8 <span class="text-muted">(820)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">Chilled Cola</h3>
+            <p class="text-muted small mb-2">300 ml can</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold text-success fs-5">₹40</span>
+                <small class="text-muted text-decoration-line-through ms-1">₹45</small>
+              </div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Chilled Cola', 40)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. Fresh Orange Juice -->
+      <div class="col product-item" data-category="drinks" data-title="orange juice fruit cold drink pulp">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">15% OFF</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Juice">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.8 <span class="text-muted">(290)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">Pure Orange Juice</h3>
+            <p class="text-muted small mb-2">1 L tetra pack</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold text-success fs-5">₹110</span>
+                <small class="text-muted text-decoration-line-through ms-1">₹130</small>
+              </div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Orange Juice', 110)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10. Energy Drink -->
+      <div class="col product-item" data-category="drinks" data-title="energy drink red can caffeine study">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">10% OFF</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Energy Drink">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.7 <span class="text-muted">(450)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">Campus Energy Boost</h3>
+            <p class="text-muted small mb-2">250 ml study session can</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold text-success fs-5">₹115</span>
+                <small class="text-muted text-decoration-line-through ms-1">₹125</small>
+              </div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Energy Drink', 115)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 11. Daily Shampoo -->
+      <div class="col product-item" data-category="personal-care" data-title="shampoo daily care hygiene bath dove">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">20% OFF</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Shampoo">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.9 <span class="text-muted">(410)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">Daily Shampoo</h3>
+            <p class="text-muted small mb-2">180 ml bottle</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold text-success fs-5">₹99</span>
+                <small class="text-muted text-decoration-line-through ms-1">₹120</small>
+              </div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Daily Shampoo', 99)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12. Gentle Handwash -->
+      <div class="col product-item" data-category="personal-care" data-title="handwash soap hygiene clean germ">
+        <div class="card h-100 product-card shadow-sm">
+          <span class="eta-pill">⚡ 10 MINS</span>
+          <span class="discount-pill">18% OFF</span>
+          <div class="product-img-box">
+            <img src="https://images.unsplash.com/photo-1608248597359-548325608b47?auto=format&fit=crop&w=400&q=80" class="product-img" alt="Handwash">
+          </div>
+          <div class="card-body p-3 d-flex flex-column">
+            <small class="text-warning mb-1">★ 4.8 <span class="text-muted">(330)</span></small>
+            <h3 class="h6 card-title fw-bold mb-1">Herbal Handwash</h3>
+            <p class="text-muted small mb-2">250 ml pump bottle</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div>
+                <span class="fw-bold text-success fs-5">₹85</span>
+                <small class="text-muted text-decoration-line-through ms-1">₹105</small>
+              </div>
+              <button class="btn btn-sm btn-outline-success fw-semibold" onclick="addToCart('Herbal Handwash', 85)">+ ADD</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Floating View Cart Banner -->
+    <div class="card bg-success text-white p-3 rounded-4 shadow-lg my-5 d-flex flex-row justify-content-between align-items-center flex-wrap gap-3">
+      <div>
+        <h4 class="h5 fw-bold mb-1">Ready to complete your order?</h4>
+        <small class="text-white-50">⚡ Instant 10-minute delivery to GLA Campus Hostels</small>
+      </div>
+      <a href="cart.html" class="btn btn-light text-success fw-bold px-4 py-2 rounded-pill shadow-sm">
+        Go to Cart & Checkout ➔
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1080">
+    <div id="cartToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="bi bi-check-circle-fill me-2"></i> <span id="toastMsg">Item added to cart!</span>
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-2 fw-bold text-success fs-4 mb-2">
+            <span class="brand-badge">⚡</span>
+            <span class="text-white">QuickMart</span>
+          </div>
+          <p class="text-white-50 small mb-3">
+            Instant 10-minute grocery delivery store designed for college students to get fresh dairy, snacks, cold drinks, and daily essentials.
+          </p>
+          <span class="badge bg-secondary">🎓 Frontend Assignment (HTML5 + CSS3 + Bootstrap 5)</span>
+        </div>
+
+        <div class="col-md-2 col-6">
+          <h4 class="h6 fw-bold text-uppercase text-light mb-3">Pages</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="categories.html" class="text-white-50 text-decoration-none">All Categories</a></li>
+            <li class="mb-2"><a href="deals.html" class="text-white-50 text-decoration-none">Student Deals</a></li>
+            <li class="mb-2"><a href="cart.html" class="text-white-50 text-decoration-none">Shopping Cart</a></li>
+            <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About QuickMart</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <h4 class="h6 fw-bold text-uppercase text-light mb-3">Categories</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="#catalogGrid" class="text-white-50 text-decoration-none">🥛 Groceries & Dairy</a></li>
+            <li class="mb-2"><a href="#catalogGrid" class="text-white-50 text-decoration-none">🍟 Snacks & Munchies</a></li>
+            <li class="mb-2"><a href="#catalogGrid" class="text-white-50 text-decoration-none">🥤 Cold Drinks</a></li>
+            <li class="mb-2"><a href="#catalogGrid" class="text-white-50 text-decoration-none">🧴 Personal Care</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h4 class="h6 fw-bold text-uppercase text-light mb-3">Student Info</h4>
+          <div class="text-white-50 small">
+            <p class="mb-1"><strong>Course:</strong> Frontend Web Development</p>
+            <p class="mb-1"><strong>Tech Stack:</strong> HTML5, CSS3, Bootstrap 5</p>
+            <p class="mb-1"><strong>Institution:</strong> GLA University</p>
+            <p class="mb-0"><strong>Status:</strong> Vercel Ready ⚡</p>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="my-4 border-secondary">
+
+      <div class="text-center text-white-50 small">
+        © 2026 QuickMart – Online Grocery Store. Built with HTML5, CSS3 & Bootstrap 5.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Interactive Script -->
+  <script>
+    let cartTotalCount = 2;
+    function addToCart(itemName, price) {
+      cartTotalCount++;
+      const navBadge = document.getElementById('navCartCount');
+      if (navBadge) navBadge.innerText = cartTotalCount;
+      
+      const toastEl = document.getElementById('cartToast');
+      document.getElementById('toastMsg').innerText = `Added ${itemName} to cart!`;
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    }
+
+    function filterCategory(category, btn) {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const items = document.querySelectorAll('.product-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+      const query = e.target.value.toLowerCase().trim();
+      const items = document.querySelectorAll('.product-item');
+      items.forEach(item => {
+        const title = item.getAttribute('data-title') || '';
+        if (title.includes(query)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,65 +1,76 @@
 # ⚡ QuickMart – 10-Minute Online Grocery Store
 
-A responsive, modern online grocery store web page built for a **Frontend Web Development Assignment** using strictly **HTML5, CSS3, and Bootstrap 5**.
+A responsive, multi-page online grocery store website built for a **Frontend Web Development Assignment** using strictly **HTML5, CSS3, and Bootstrap 5**.
 
 ---
 
-## 🎓 Project Highlights (For Viva / Study)
+## 🚀 Live Localhost View
+The project is running locally at:
+👉 **[http://localhost:3000](http://localhost:3000)**
 
-This project strictly utilizes the frontend fundamentals taught in class:
-
-1. **HTML5 Semantic Structure**:
-   * `<header>` with Bootstrap Navbar, search bar, and cart badge.
-   * `<main>` containing promotional banners, product catalog grid, and shopping cart sidebar.
-   * `<section>` tags dividing products into clear categories (*Groceries & Dairy*, *Snacks & Munchies*, *Drinks & Personal Care*).
-   * `<aside>` for the sticky shopping cart bill calculation.
-   * `<footer>` containing student info, category links, and sample items.
-
-2. **Bootstrap 5 Components**:
-   * **Navbar**: `navbar navbar-expand-lg bg-white sticky-top`
-   * **Grid System**: `container`, `row`, `col-lg-8` (products), `col-lg-4` (cart)
-   * **Cards**: `card`, `card-img-top`, `card-body`
-   * **Badges**: `badge bg-warning`, `badge bg-success`
-   * **Modal**: Clean Bootstrap modal (`#orderSuccessModal`) triggered via `data-bs-toggle="modal"` on checkout.
-
-3. **Custom CSS (`style.css`)**:
-   * Applied Google Font **Poppins**.
-   * Smooth page scrolling (`scroll-behavior: smooth`).
-   * Subtle card hover lift animations (`transform: translateY(-5px)`).
-   * Uniform image dimensions (`object-fit: cover`).
+To run it anytime locally in your terminal:
+```bash
+python -m http.server 3000
+```
 
 ---
 
-## 💻 How to Run Locally
-
-1. Open terminal inside this folder:
-   ```bash
-   python -m http.server 3000
-   ```
-2. Open your web browser and visit:
-   👉 **[http://localhost:3000](http://localhost:3000)**
+## 🌐 Deploy to Vercel (1-Click)
+Since this repository is on GitHub:
+1. Go to [vercel.com](https://vercel.com) and log in with GitHub.
+2. Click **Add New...** ➔ **Project**.
+3. Import **`QuickMart`** and click **Deploy**.
+4. Your website will be live with a free `.vercel.app` URL and global edge CDN!
 
 ---
 
-## 🚀 How to Deploy to Vercel
+## 📄 Multi-Page Project Structure
 
-1. Push this repository to GitHub:
-   ```bash
-   git push -u origin main
-   ```
-2. Go to [vercel.com](https://vercel.com) and log in with GitHub.
-3. Click **Add New...** ➔ **Project** ➔ Import `QuickMart`.
-4. Click **Deploy**. Your site will be live instantly with a free `.vercel.app` URL!
+This project features 5 interconnected webpages sharing a responsive Bootstrap navbar and footer:
+
+1. **[index.html](file:///c:/Users/hp/OneDrive/Desktop/html/index.html)** — **Home Page**
+   * Responsive sticky navbar with brand logo, delivery address badge, and search bar.
+   * Flash Deals countdown banner (`GLA100`).
+   * Vibrant Hero section with custom 3D delivery scooter graphic (`images/hero-delivery.jpg`).
+   * Category filter pills with live interactive filtering.
+   * 8 featured product cards with discount pills, star ratings, and `+ ADD` actions.
+   * Live shopping cart sidebar with bill breakdown & checkout modal.
+
+2. **[categories.html](file:///c:/Users/hp/OneDrive/Desktop/html/categories.html)** — **All Categories & Catalog**
+   * Full 12-product catalog (*Groceries & Dairy*, *Snacks & Munchies*, *Cold Drinks*, *Personal Care*).
+   * Category filter tabs and live search bar.
+   * Interactive add-to-cart toast notifications.
+
+3. **[deals.html](file:///c:/Users/hp/OneDrive/Desktop/html/deals.html)** — **Student Deals & Offers**
+   * GLA University exclusive discount coupon cards with 1-click **Copy Code** functionality (`GLA100`, `STUDENT20`, `MIDNIGHT50`, `HOSTELBOGO`).
+   * Curated student combos (Late Night Study Pack, Breakfast Bundle, Weekend Binge Pack, Hostel Hygiene Kit).
+
+4. **[cart.html](file:///c:/Users/hp/OneDrive/Desktop/html/cart.html)** — **Full Shopping Cart & Checkout**
+   * Interactive item quantity table with subtotal calculations.
+   * Campus hostel delivery address form.
+   * Payment method selection (UPI / QR Code, Cash on Delivery, GLA Smart Card).
+   * Order Summary with working coupon code box and live order timeline modal.
+
+5. **[about.html](file:///c:/Users/hp/OneDrive/Desktop/html/about.html)** — **About & Assignment Info**
+   * QuickMart story and the 10-minute delivery model (4-step visual workflow).
+   * Technical stack breakdown (HTML5, CSS3, Bootstrap 5.3, Bootstrap Icons).
+   * Student academic profile card and feedback form.
 
 ---
 
-## 📁 Clean File Structure
+## 📁 Repository Files
 ```text
-├── index.html        # Core HTML5 & Bootstrap 5 webpage
-├── style.css         # Lightweight custom styles & animations (~70 lines)
-├── vercel.json       # Vercel deployment configuration
-├── .vercelignore     # Ignored files for clean deployments
-├── .gitignore        # Git ignore rules
-├── package.json      # Project details
-└── README.md         # Documentation & study guide
+├── index.html              # Home page
+├── categories.html         # Categories & product catalog
+├── deals.html              # Student coupons & combos
+├── cart.html               # Dedicated cart & checkout page
+├── about.html              # About & academic submission
+├── style.css               # Clean custom styling & animations
+├── images/
+│   └── hero-delivery.jpg   # 3D electric delivery scooter image
+├── vercel.json             # Vercel routing & cache headers
+├── .vercelignore           # Ignored files for deployment
+├── .gitignore              # Clean git ignore configuration
+├── package.json            # Project metadata
+└── README.md               # Project guide & documentation
 ```

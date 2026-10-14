@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About QuickMart – Frontend Project | 10 Min Delivery</title>
+  <meta name="description" content="Learn about QuickMart, our 10-minute campus grocery delivery model, tech stack, and GLA University assignment details.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 CSS & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="sticky-top navbar-blur shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container py-2">
+      
+      <!-- Brand Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-success fs-4 me-2" href="index.html">
+        <span class="brand-badge">⚡</span>
+        <div><span class="text-success">QuickMart</span></div>
+      </a>
+
+      <!-- Location Chip -->
+      <div class="location-chip d-none d-xl-flex align-items-center me-3">
+        <i class="bi bi-geo-alt-fill text-danger me-2 fs-5"></i>
+        <div class="lh-sm">
+          <div class="d-flex align-items-center gap-1">
+            <span class="live-dot"></span>
+            <small class="fw-bold text-dark">GLA Campus, Hostel 4</small>
+          </div>
+          <small class="text-muted">Mathura • 10 mins delivery</small>
+        </div>
+      </div>
+
+      <!-- Mobile Toggler Button -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Nav Content -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold" href="index.html">
+              <i class="bi bi-house-door-fill me-1"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold" href="categories.html">
+              <i class="bi bi-grid-fill me-1"></i> Categories
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold" href="deals.html">
+              <i class="bi bi-tag-fill me-1"></i> Deals <span class="badge bg-danger rounded-pill ms-1">HOT</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 fw-semibold active" href="about.html">
+              <i class="bi bi-info-circle-fill me-1"></i> About
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a href="cart.html" class="btn btn-success d-flex align-items-center gap-2 px-3 py-2 rounded-pill shadow-sm">
+              <i class="bi bi-cart3 fs-5"></i>
+              <span class="fw-semibold">Cart</span>
+              <span class="badge bg-warning text-dark rounded-pill" id="navCartCount">2</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- ==================== BREADCRUMB ==================== -->
+  <div class="bg-light py-3 border-bottom mb-4">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-1 small">
+            <li class="breadcrumb-item"><a href="index.html" class="text-success text-decoration-none">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+          </ol>
+        </nav>
+        <h1 class="h3 fw-bold mb-0">About QuickMart & Project</h1>
+      </div>
+      <span class="badge bg-secondary p-2">Frontend Assignment Showcase</span>
+    </div>
+  </div>
+
+  <!-- ==================== ABOUT CONTENT ==================== -->
+  <main class="container my-4">
+
+    <!-- Mission & Story Banner -->
+    <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-5">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 p-4 p-md-5">
+          <span class="badge bg-warning text-dark fw-bold mb-3 px-3 py-1">⚡ Campus Quick Commerce</span>
+          <h2 class="display-6 fw-bold mb-3 text-dark">Built for College Students, by Students</h2>
+          <p class="text-muted mb-3">
+            QuickMart is an instant 10-minute online grocery delivery concept created for GLA University students. Whether it's milk for morning tea, chips for evening group studies, or mid-night noodles during exam season, QuickMart delivers right to the hostel door.
+          </p>
+          <div class="row g-3 pt-2">
+            <div class="col-6">
+              <div class="border rounded-3 p-3 text-center bg-light">
+                <h3 class="h4 fw-bold text-success mb-0">10 Mins</h3>
+                <small class="text-muted">Average Delivery Time</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="border rounded-3 p-3 text-center bg-light">
+                <h3 class="h4 fw-bold text-success mb-0">100% Free</h3>
+                <small class="text-muted">Delivery on Campus</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center p-4 bg-light">
+          <img src="images/hero-delivery.jpg" class="img-fluid rounded-4 shadow" style="max-height: 340px; object-fit: cover;" alt="QuickMart Electric Scooter">
+        </div>
+      </div>
+    </div>
+
+    <!-- How It Works (4 Steps) -->
+    <section class="mb-5">
+      <div class="text-center mb-4">
+        <span class="badge bg-success mb-2">Our Process</span>
+        <h2 class="h3 fw-bold">How 10-Minute Delivery Works</h2>
+        <p class="text-muted small">Four swift steps from clicking order to opening your hostel door.</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-4 g-4 text-center">
+        
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div class="display-5 text-success mb-3">📱</div>
+            <h3 class="h6 fw-bold mb-2">1. Quick Order</h3>
+            <p class="text-muted small mb-0">Student chooses groceries and taps checkout in under 10 seconds.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div class="display-5 text-warning mb-3">📦</div>
+            <h3 class="h6 fw-bold mb-2">2. 2-Min Packing</h3>
+            <p class="text-muted small mb-0">Dedicated dark store picker bags items within 120 seconds.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div class="display-5 text-primary mb-3">🛵</div>
+            <h3 class="h6 fw-bold mb-2">3. Electric Transit</h3>
+            <p class="text-muted small mb-0">Eco-friendly campus delivery partner speeds toward the hostel block.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm rounded-4 p-4">
+            <div class="display-5 text-success mb-3">🎉</div>
+            <h3 class="h6 fw-bold mb-2">4. Doorstep Handover</h3>
+            <p class="text-muted small mb-0">Fresh produce handed over safely at the student's hostel gate.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Technical Stack & Student Info -->
+    <div class="row g-4 mb-5">
+      
+      <!-- Tech Stack -->
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+          <h3 class="h5 fw-bold text-dark mb-3">
+            <i class="bi bi-code-slash text-success me-2"></i>Technology Stack Used
+          </h3>
+          <p class="text-muted small mb-3">
+            Built strictly adhering to the requirements of the college frontend syllabus:
+          </p>
+          <ul class="list-group list-group-flush small">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              <span><strong>HTML5</strong> (Semantic markup, meta tags, forms, tables)</span>
+              <span class="badge bg-success">Core</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              <span><strong>CSS3</strong> (Custom gradients, smooth scroll, hover animations)</span>
+              <span class="badge bg-primary">Styling</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              <span><strong>Bootstrap 5.3</strong> (Grid, Navbar, Cards, Badges, Modals)</span>
+              <span class="badge bg-purple text-bg-dark">Framework</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              <span><strong>Bootstrap Icons</strong> (Scalable SVG web icons)</span>
+              <span class="badge bg-info text-dark">Icons</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-0">
+              <span><strong>Vercel</strong> (Global edge deployment & caching)</span>
+              <span class="badge bg-dark">Hosting</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Student Assignment Card -->
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
+          <h3 class="h5 fw-bold text-dark mb-3">
+            <i class="bi bi-mortarboard-fill text-warning me-2"></i>Academic Submission Details
+          </h3>
+          <div class="bg-light p-3 rounded-3 small mb-3">
+            <div class="row g-2">
+              <div class="col-5 text-muted">Project Name:</div>
+              <div class="col-7 fw-bold">QuickMart – Online Grocery Store</div>
+              
+              <div class="col-5 text-muted">Course:</div>
+              <div class="col-7">Frontend Web Development (HTML/CSS/Bootstrap)</div>
+              
+              <div class="col-5 text-muted">Student Name:</div>
+              <div class="col-7 fw-bold">Sumit Thakur / Shrikant Thakur</div>
+
+              <div class="col-5 text-muted">Branch / Year:</div>
+              <div class="col-7">B.Tech Computer Science & Engineering</div>
+
+              <div class="col-5 text-muted">Institution:</div>
+              <div class="col-7 fw-semibold text-success">GLA University, Mathura</div>
+            </div>
+          </div>
+          <p class="text-muted small mb-0">
+            This project showcases responsive web development, multi-page routing, modern UI design, and production deployment on Vercel.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Student Contact / Query Form -->
+    <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5 mb-4">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5">
+          <span class="badge bg-success mb-2">Get In Touch</span>
+          <h3 class="h4 fw-bold">Questions or Feedback?</h3>
+          <p class="text-muted small">
+            Leave a note about your experience with QuickMart or suggest new grocery items to stock at the campus hub.
+          </p>
+          <div class="d-flex align-items-center gap-3 mt-3">
+            <i class="bi bi-envelope-fill text-success fs-4"></i>
+            <div>
+              <strong class="d-block small">Email Us</strong>
+              <small class="text-muted">support.quickmart@gla.ac.in</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <form onsubmit="alert('Thank you! Your feedback has been received.'); event.preventDefault();">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Hostel & Room No." required>
+              </div>
+              <div class="col-12">
+                <textarea class="form-control" rows="3" placeholder="Your message or product request..." required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-success fw-semibold px-4 py-2">
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-2 fw-bold text-success fs-4 mb-2">
+            <span class="brand-badge">⚡</span>
+            <span class="text-white">QuickMart</span>
+          </div>
+          <p class="text-white-50 small mb-3">
+            Instant 10-minute grocery delivery store designed for college students to get fresh dairy, snacks, cold drinks, and daily essentials.
+          </p>
+          <span class="badge bg-secondary">🎓 Frontend Assignment (HTML5 + CSS3 + Bootstrap 5)</span>
+        </div>
+
+        <div class="col-md-2 col-6">
+          <h4 class="h6 fw-bold text-uppercase text-light mb-3">Pages</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="categories.html" class="text-white-50 text-decoration-none">All Categories</a></li>
+            <li class="mb-2"><a href="deals.html" class="text-white-50 text-decoration-none">Student Deals</a></li>
+            <li class="mb-2"><a href="cart.html" class="text-white-50 text-decoration-none">Shopping Cart</a></li>
+            <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About QuickMart</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <h4 class="h6 fw-bold text-uppercase text-light mb-3">Categories</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="categories.html" class="text-white-50 text-decoration-none">🥛 Groceries & Dairy</a></li>
+            <li class="mb-2"><a href="categories.html" class="text-white-50 text-decoration-none">🍟 Snacks & Munchies</a></li>
+            <li class="mb-2"><a href="categories.html" class="text-white-50 text-decoration-none">🥤 Cold Drinks</a></li>
+            <li class="mb-2"><a href="categories.html" class="text-white-50 text-decoration-none">🧴 Personal Care</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h4 class="h6 fw-bold text-uppercase text-light mb-3">Student Info</h4>
+          <div class="text-white-50 small">
+            <p class="mb-1"><strong>Course:</strong> Frontend Web Development</p>
+            <p class="mb-1"><strong>Tech Stack:</strong> HTML5, CSS3, Bootstrap 5</p>
+            <p class="mb-1"><strong>Institution:</strong> GLA University</p>
+            <p class="mb-0"><strong>Status:</strong> Vercel Ready ⚡</p>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="my-4 border-secondary">
+
+      <div class="text-center text-white-50 small">
+        © 2026 QuickMart – Online Grocery Store. Built with HTML5, CSS3 & Bootstrap 5.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

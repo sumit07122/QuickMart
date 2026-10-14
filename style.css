@@ -22,33 +22,37 @@ body {
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: #f8fafc;
   color: var(--text-dark);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* --------------------------------------------------------------------------
-   2. NAVBAR & HEADER POLISH
+   2. NAVBAR & HEADER (Fixed & Responsive)
    -------------------------------------------------------------------------- */
 .navbar-blur {
-  background: rgba(255, 255, 255, 0.94) !important;
+  background: rgba(255, 255, 255, 0.96) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .brand-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   background: linear-gradient(135deg, #fecb00, #f59e0b);
   border-radius: 10px;
-  font-size: 1.3rem;
-  box-shadow: 0 4px 10px rgba(254, 203, 0, 0.4);
+  font-size: 1.25rem;
+  box-shadow: 0 4px 10px rgba(254, 203, 0, 0.35);
   animation: pulse-glow 2.5s infinite;
 }
 
@@ -60,8 +64,9 @@ html {
 .location-chip {
   background-color: #f1f5f9;
   border-radius: 10px;
-  padding: 6px 14px;
+  padding: 6px 12px;
   transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
 }
 
 .location-chip:hover {
@@ -74,17 +79,98 @@ html {
   background-color: #22c55e;
   border-radius: 50%;
   display: inline-block;
-  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25);
   animation: blink 1.5s infinite;
 }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  50% { opacity: 0.3; }
+}
+
+.nav-link {
+  color: #475569 !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--brand-green) !important;
+  background-color: var(--brand-light-green);
 }
 
 /* --------------------------------------------------------------------------
-   3. HORIZONTAL CATEGORY NAVIGATION BAR
+   3. HERO BANNER & 3D SCOOTER IMAGE
+   -------------------------------------------------------------------------- */
+.hero-card {
+  background: linear-gradient(135deg, #0c831f 0%, #075213 100%);
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.hero-card::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -15%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(254, 203, 0, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-img-wrapper {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+  background: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.hero-img-wrapper:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.hero-img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-floating-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.stat-chip {
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   4. CATEGORY NAVIGATION & PILLS
    -------------------------------------------------------------------------- */
 .category-scroll {
   white-space: nowrap;
@@ -114,41 +200,6 @@ html {
 }
 
 /* --------------------------------------------------------------------------
-   4. HERO BANNER WITH GRADIENT & STATS
-   -------------------------------------------------------------------------- */
-.hero-card {
-  background: linear-gradient(135deg, #0c831f 0%, #075213 100%);
-  position: relative;
-  overflow: hidden;
-  border: none;
-}
-
-.hero-card::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  right: -20%;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(254, 203, 0, 0.18) 0%, transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.stat-chip {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #ffffff;
-  border-radius: 8px;
-  padding: 6px 14px;
-  font-size: 0.85rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* --------------------------------------------------------------------------
    5. PRODUCT CARDS & MICRO-INTERACTIONS
    -------------------------------------------------------------------------- */
 .product-card {
@@ -172,6 +223,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .product-img {
@@ -214,7 +267,7 @@ html {
 }
 
 /* --------------------------------------------------------------------------
-   6. SHOPPING CART SIDEBAR
+   6. SHOPPING CART SIDEBAR & CART PAGE
    -------------------------------------------------------------------------- */
 .cart-card {
   border-radius: 16px !important;
@@ -222,8 +275,8 @@ html {
 }
 
 .cart-thumb {
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -249,7 +302,34 @@ html {
 }
 
 /* --------------------------------------------------------------------------
-   7. LIVE DELIVERY TRACKER (Inside Modal)
+   7. DEALS & COUPON CARDS
+   -------------------------------------------------------------------------- */
+.coupon-card {
+  border: 2px dashed #0c831f;
+  background-color: #f0fdf4;
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.coupon-card:hover {
+  transform: translateY(-4px);
+}
+
+.coupon-code-badge {
+  background: #0c831f;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. LIVE DELIVERY TRACKER (Inside Modal & Cart Page)
    -------------------------------------------------------------------------- */
 .timeline-step {
   display: flex;
