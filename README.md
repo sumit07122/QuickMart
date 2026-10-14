@@ -1,58 +1,65 @@
 # ⚡ QuickMart – 10-Minute Online Grocery Store
 
-An online grocery store website with delivery tracking, category navigation, shopping cart breakdown, and order placement modal.
-
-## 🚀 Live Localhost View
-The project is currently running locally at:
-👉 **[http://localhost:3000](http://localhost:3000)**
-
-To run it anytime locally in terminal:
-```bash
-python -m http.server 3000
-```
-Then open your browser at `http://localhost:3000`.
+A responsive, modern online grocery store web page built for a **Frontend Web Development Assignment** using strictly **HTML5, CSS3, and Bootstrap 5**.
 
 ---
 
-## 🌐 Deploy to Vercel (Step-by-Step)
+## 🎓 Project Highlights (For Viva / Study)
 
-You can deploy this website to Vercel in less than 2 minutes using either of these two methods:
+This project strictly utilizes the frontend fundamentals taught in class:
 
-### Method 1: Deploy via GitHub (Recommended)
-1. Initialize Git and commit the files:
+1. **HTML5 Semantic Structure**:
+   * `<header>` with Bootstrap Navbar, search bar, and cart badge.
+   * `<main>` containing promotional banners, product catalog grid, and shopping cart sidebar.
+   * `<section>` tags dividing products into clear categories (*Groceries & Dairy*, *Snacks & Munchies*, *Drinks & Personal Care*).
+   * `<aside>` for the sticky shopping cart bill calculation.
+   * `<footer>` containing student info, category links, and sample items.
+
+2. **Bootstrap 5 Components**:
+   * **Navbar**: `navbar navbar-expand-lg bg-white sticky-top`
+   * **Grid System**: `container`, `row`, `col-lg-8` (products), `col-lg-4` (cart)
+   * **Cards**: `card`, `card-img-top`, `card-body`
+   * **Badges**: `badge bg-warning`, `badge bg-success`
+   * **Modal**: Clean Bootstrap modal (`#orderSuccessModal`) triggered via `data-bs-toggle="modal"` on checkout.
+
+3. **Custom CSS (`style.css`)**:
+   * Applied Google Font **Poppins**.
+   * Smooth page scrolling (`scroll-behavior: smooth`).
+   * Subtle card hover lift animations (`transform: translateY(-5px)`).
+   * Uniform image dimensions (`object-fit: cover`).
+
+---
+
+## 💻 How to Run Locally
+
+1. Open terminal inside this folder:
    ```bash
-   git init
-   git add .
-   git commit -m "Initial QuickMart commit ready for Vercel"
+   python -m http.server 3000
    ```
-2. Push your repository to your GitHub account (`https://github.com/new`).
-3. Go to [vercel.com](https://vercel.com) and log in with your GitHub account.
-4. Click **"Add New..."** ➔ **"Project"**.
-5. Select your repository and click **"Import"**.
-6. Leave the default settings (Framework Preset: *Other*, Root Directory: `./`).
-7. Click **"Deploy"**! 🎉 Your site will be live on a `*.vercel.app` URL with free SSL and global CDN.
+2. Open your web browser and visit:
+   👉 **[http://localhost:3000](http://localhost:3000)**
 
 ---
 
-### Method 2: Deploy directly via Vercel CLI
-If you have Vercel CLI installed:
-```bash
-cmd /c npx vercel
-```
-1. Follow the interactive prompts (Link to existing project: `N`, Project name: `quickmart`, Directory: `./`).
-2. When asked to deploy to production, run:
+## 🚀 How to Deploy to Vercel
+
+1. Push this repository to GitHub:
    ```bash
-   cmd /c npx vercel --prod
+   git push -u origin main
    ```
+2. Go to [vercel.com](https://vercel.com) and log in with GitHub.
+3. Click **Add New...** ➔ **Project** ➔ Import `QuickMart`.
+4. Click **Deploy**. Your site will be live instantly with a free `.vercel.app` URL!
 
 ---
 
-## 📁 Project Structure
+## 📁 Clean File Structure
 ```text
-├── index.html        # Main application structure and content
-├── style.css         # Complete styling, animations, responsive design
-├── vercel.json       # Vercel deployment routing and caching headers
+├── index.html        # Core HTML5 & Bootstrap 5 webpage
+├── style.css         # Lightweight custom styles & animations (~70 lines)
+├── vercel.json       # Vercel deployment configuration
 ├── .vercelignore     # Ignored files for clean deployments
 ├── .gitignore        # Git ignore rules
-└── package.json      # Project metadata
+├── package.json      # Project details
+└── README.md         # Documentation & study guide
 ```

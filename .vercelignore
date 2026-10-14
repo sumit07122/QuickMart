@@ -1,8 +1,5 @@
 # Vercel Ignore
 .git
 .github
-vs code/
-Untitled-1.html
-css.css
 *.log
 .DS_Store

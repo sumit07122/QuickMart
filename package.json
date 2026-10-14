@@ -1,7 +1,7 @@
 {
   "name": "quickmart-online-grocery",
   "version": "1.0.0",
-  "description": "QuickMart - 10-Minute Online Grocery Store built with HTML5 & CSS3",
+  "description": "QuickMart - 10-Minute Online Grocery Store built with HTML5, CSS3 and Bootstrap 5",
   "main": "index.html",
   "scripts": {
     "start": "python -m http.server 3000",
@@ -12,8 +12,9 @@
     "ecommerce",
     "html5",
     "css3",
+    "bootstrap5",
     "quickmart",
-    "vercel"
+    "frontend-assignment"
   ],
   "author": "Shrikant Thakur",
   "license": "MIT"
