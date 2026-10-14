@@ -5,82 +5,295 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. GLOBAL & FONT SETTINGS
+   1. COLOR PALETTE & GLOBAL VARIABLES
    -------------------------------------------------------------------------- */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa; /* Soft light grey background */
-  color: #212529;
+:root {
+  --brand-green: #0c831f;       /* Fresh Grocery Green */
+  --brand-dark-green: #075c15;  /* Deep Forest Green */
+  --brand-light-green: #f0fdf4; /* Mint Tint */
+  --brand-yellow: #fecb00;      /* Lightning Yellow */
+  --brand-orange: #ff6f00;      /* Offer Orange */
+  --text-dark: #0f172a;         /* Deep Slate */
+  --text-muted: #64748b;        /* Soft Grey */
+  --card-border: #f1f5f9;       /* Subtle Border */
 }
 
-/* Enable smooth scrolling when clicking navigation anchors (#groceries, #cart-section) */
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 /* --------------------------------------------------------------------------
-   2. BRAND LOGO STYLING
+   2. NAVBAR & HEADER POLISH
    -------------------------------------------------------------------------- */
+.navbar-blur {
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
 .brand-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  background-color: #fecb00; /* Bright lightning yellow */
-  border-radius: 8px;
-  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #fecb00, #f59e0b);
+  border-radius: 10px;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 10px rgba(254, 203, 0, 0.4);
+  animation: pulse-glow 2.5s infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.location-chip {
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  padding: 6px 14px;
+  transition: all 0.2s ease;
+}
+
+.location-chip:hover {
+  background-color: #e2e8f0;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 
 /* --------------------------------------------------------------------------
-   3. HORIZONTAL CATEGORIES BAR (Scrollable on Mobile)
+   3. HORIZONTAL CATEGORY NAVIGATION BAR
    -------------------------------------------------------------------------- */
 .category-scroll {
   white-space: nowrap;
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  scrollbar-width: none;
 }
 
 .category-scroll::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in Chrome / Safari */
+  display: none;
+}
+
+.cat-btn {
+  font-weight: 500;
+  font-size: 0.88rem;
+  border-radius: 20px;
+  padding: 6px 16px;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #475569;
+}
+
+.cat-btn:hover, .cat-btn.active {
+  background-color: var(--brand-light-green);
+  color: var(--brand-green);
+  border-color: var(--brand-green);
+  box-shadow: 0 2px 6px rgba(12, 131, 31, 0.15);
 }
 
 /* --------------------------------------------------------------------------
-   4. HERO PROMOTIONAL BANNER
-   Uses a clean CSS gradient from dark green to forest green
+   4. HERO BANNER WITH GRADIENT & STATS
    -------------------------------------------------------------------------- */
 .hero-card {
   background: linear-gradient(135deg, #0c831f 0%, #075213 100%);
+  position: relative;
+  overflow: hidden;
   border: none;
 }
 
+.hero-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(254, 203, 0, 0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.stat-chip {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 /* --------------------------------------------------------------------------
-   5. PRODUCT CARDS & IMAGES
-   Card hover lift effect + uniform image aspect ratio
+   5. PRODUCT CARDS & MICRO-INTERACTIONS
    -------------------------------------------------------------------------- */
 .product-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  overflow: hidden;
-  border-radius: 12px !important;
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid #f1f5f9 !important;
+  border-radius: 16px !important;
+  background: #ffffff;
+  position: relative;
 }
 
-/* Subtle lift on hover */
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+  border-color: #cbd5e1 !important;
 }
 
-/* Fixed image height so all cards align evenly in the grid */
+.product-img-box {
+  height: 145px;
+  overflow: hidden;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .product-img {
-  height: 140px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  background-color: #f1f5f9;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.06);
+}
+
+.discount-pill {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.35);
+  z-index: 2;
+}
+
+.eta-pill {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(254, 203, 0, 0.95);
+  color: #0f172a;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 /* --------------------------------------------------------------------------
-   6. SHOPPING CART THUMBNAILS
+   6. SHOPPING CART SIDEBAR
    -------------------------------------------------------------------------- */
+.cart-card {
+  border-radius: 16px !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
 .cart-thumb {
-  width: 52px;
-  height: 52px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
+  border-radius: 8px;
+}
+
+.free-progress {
+  height: 6px;
+  border-radius: 10px;
+  background-color: #e2e8f0;
+}
+
+.checkout-btn {
+  background: linear-gradient(135deg, #0c831f, #096d19);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(12, 131, 31, 0.3);
+  transition: all 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(135deg, #096d19, #075213);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(12, 131, 31, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   7. LIVE DELIVERY TRACKER (Inside Modal)
+   -------------------------------------------------------------------------- */
+.timeline-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.timeline-step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 26px;
+  bottom: 0;
+  width: 2px;
+  background-color: #cbd5e1;
+}
+
+.timeline-step.completed:not(:last-child)::before {
+  background-color: #22c55e;
+}
+
+.timeline-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  background-color: #f1f5f9;
+  color: #64748b;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.timeline-step.completed .timeline-icon {
+  background-color: #22c55e;
+  color: #ffffff;
+}
+
+.timeline-step.active .timeline-icon {
+  background-color: #fecb00;
+  color: #0f172a;
+  animation: pulse-glow 1.5s infinite;
 }
